@@ -30,6 +30,8 @@ starDraw::starDraw(int N)
 
 starDraw::~starDraw()
 {
+	delete[] *arr;
+	delete[] arr;
 }
 
 void starDraw::Draw() {
