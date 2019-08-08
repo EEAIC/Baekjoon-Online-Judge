@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int N, K;
+	cin >> N >> K;
+	int t = 0;
+	for (int i = 1; i <= N; i++) {
+		if (N % i == 0) {
+			t += 1;
+			if (t == K) {
+				cout << i;
+				return 0;
+			}
+		}
+	}
+
+	cout << 0;
+	return 0;
+}
