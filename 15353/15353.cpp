@@ -37,8 +37,7 @@ int main() {
 				else {
 					break;
 				}
-			}
-			if (rit_B == B.rend()) {
+			} else if (rit_B == B.rend()) {
 				if (up) {
 					num = *rit_A - '0' + up;
 					up = num / 10;
