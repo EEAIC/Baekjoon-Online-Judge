@@ -9,11 +9,11 @@ stack<int> stk;
 list<int> *adj;
 bool *visited;
 
-void bfs_sort(int index) {
+void dfs_sort(int index) {
     visited[index] = true;
     for (auto elem: adj[index]) {
         if (!visited[elem]) {
-            bfs_sort(elem);
+            dfs_sort(elem);
         }
     }
     stk.push(index);
@@ -39,7 +39,7 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         if (visited[i] == false) {
-            bfs_sort(i);
+            dfs_sort(i);
         }
     }
 
